@@ -1,0 +1,17 @@
+QUESTION : 
+
+=> Display department and number of computers made by Dell allocated in that department.
+
+ANSWER 
+------------------------------------------------------------------------------------
+SELECT 
+    E.Dept DEPT , COUNT(E.DEPT) "NUMBER OF COMPUTERS"
+FROM 
+    EMPLOYEE E INNER JOIN COMPUTER C
+ON
+    E.COMPID = C.COMPID
+WHERE
+    C.MAKE = 'Dell'
+GROUP BY
+    E.DEPT
+------------------------------------------------------------------------------------

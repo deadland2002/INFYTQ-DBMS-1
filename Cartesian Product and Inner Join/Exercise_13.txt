@@ -1,0 +1,13 @@
+QUESTION : 
+
+=> Display id, name, computer id and make of the computers allocated to employees provided model is either 'Precision' or 'Edge'.
+
+ANSWER 
+------------------------------------------------------------------------------------
+SELECT 
+    E.Id ID , E.Ename ENAME , E.Compid COMPID , C.Make MAKE 
+FROM 
+    Employee E Inner Join Computer C on E.Compid = C.Compid
+WHERE 
+    C.Model IN ('Precision' , 'Edge')
+------------------------------------------------------------------------------------

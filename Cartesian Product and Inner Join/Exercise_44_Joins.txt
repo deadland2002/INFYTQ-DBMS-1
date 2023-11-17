@@ -1,0 +1,13 @@
+QUESTION : 
+
+=> Display employee id, name and department along with computer id and make of computers allocated to them.
+
+ANSWER 
+------------------------------------------------------------------------------------
+SELECT 
+    E.Id ID , E.Ename ENAME , E.Dept DEPT , E.Compid COMPID , C.Make MAKE 
+FROM 
+    Employee E Inner Join Computer C 
+ON 
+    E.Compid = C.Compid;
+------------------------------------------------------------------------------------
